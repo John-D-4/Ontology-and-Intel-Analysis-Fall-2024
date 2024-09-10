@@ -22,10 +22,36 @@ https://github.com/Applied-Ontology-Education/Ontology-and-Intel-Analysis-Fall-2
 describes an integrating semantic framework (isf) as a contrast from llm garbage, based on ontological realism.
 
 presentation possibilities: 
-an example of extremism - longest possible ontologic path from 1: classes and properties of a single collection,
+~~an example of extremism - longest possible ontologic path from 
+1: classes and properties of a single collection,
 2: from two collections on one event, and
-3: from any two information artifacts in accessible holdings
+3: from any two information artifacts in accessible holdings~~
+4: a design of RF UTS
+5: a design of Fin UTS
 
 https://www.citationmachine.net/bibliographies/0d90abd2-e774-4971-9b1d-16eb20a0cf29
 
 # week 3
+
+## RF UTS
+### Competency Questions
+### Pattern Description
+#### Material Entities
+- car
+- phone
+- wearable tech
+- service radio
+- wallet
+- inventory rfid
+- implants
+- medical devices
+#### Material Entities' Qualities
+- frequency
+- power
+- gain
+- protocol
+- duty cycle
+#### Processes
+#### Realizable Entities (Properties that underwrite what the material entities can do)
+#### Generically Dependant Continuants (Info used to discuss 1-4)
+### Competency Questions
