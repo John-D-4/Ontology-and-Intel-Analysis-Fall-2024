@@ -33,25 +33,5 @@ https://www.citationmachine.net/bibliographies/0d90abd2-e774-4971-9b1d-16eb20a0c
 
 # week 3
 
-## RF UTS
-### Competency Questions
-### Pattern Description
-#### Material Entities
-- car
-- phone
-- wearable tech
-- service radio
-- wallet
-- inventory rfid
-- implants
-- medical devices
-#### Material Entities' Qualities
-- frequency
-- power
-- gain
-- protocol
-- duty cycle
-#### Processes
-#### Realizable Entities (Properties that underwrite what the material entities can do)
-#### Generically Dependant Continuants (Info used to discuss 1-4)
-### Competency Questions
+Presentation information drafting: (RF-UTS.md)
+Headlining design principle: "cut from the whole cloth," build the large ontology and provide excerpts to devs as needed, ensuring compatibility.
