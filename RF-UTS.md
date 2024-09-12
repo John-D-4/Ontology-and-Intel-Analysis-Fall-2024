@@ -1,6 +1,6 @@
 # RF UTS design draft
 ## Pattern Description:
-A model of modern rf persona attributes
+A model of modern rf persona entities and attributes
 #### Material Entities
 - car
 - phone
