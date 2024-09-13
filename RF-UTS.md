@@ -60,6 +60,11 @@ flowchart TD
 	    	U <--> V(quality):::BFO
 	    		V <--> W(relational<br />quality):::BFO
 				W <--> UE(signal properties)
+					UE <--> [frequency]
+					UE <--> [power]
+					UE <--> [gain]
+					UE <--> [protocol]
+					UE <--> [duty cycle]
 	    	U <--> X(realizable<br />entity):::BFO
 	    		X <--> Y(role):::BFO
 	    			Y <--> UA(signal)
