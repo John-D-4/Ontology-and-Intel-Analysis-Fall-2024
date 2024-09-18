@@ -1,40 +1,41 @@
 ```mermaid
-flowchart TD
-    A(Entity):::BFO <--> |is a| B(Continuant)
 
-	    B(Continuant):::BFO <-->D(Generically Dependant<br />Continuant):::BFO
-	    B(Continuant):::BFO <-->E(Independant<br />Continuant):::BFO
-		    E(Independant<br />Continuant):::BFO <--> F(material<br />entity):::BFO
-		 	   F(Independant<br />Continuant):::BFO <--> G(object):::BFO
-		    	   F(Independant<br />Continuant):::BFO <--> H(fiat object<br />part):::BFO
-			   F(Independant<br />Continuant):::BFO <--> I(object<br />aggregate):::BFO
-		    E(Independant<br />Continuant):::BFO <--> J(immaterial<br />entity):::BFO
-		    	J <--> K(site):::BFO
-		    	J <--> L(continuant<br />fiat boundary):::BFO
-		    		L <--> M(fiat point<br />boundary):::BFO
-		    		L <--> N(fiat line<br />boundary):::BFO
-		    		L <--> O(fiat surface<br />boundary):::BFO
-		    	J <--> P(spatial<br />region):::BFO
-		    		P <--> Q(0D spatial<br />region):::BFO
-		    		P <--> R(1D spatial<br />region):::BFO
-		    		P <--> S(2D spatial<br />region):::BFO
-		    		P <--> T(3D spatial<br />region):::BFO	    		
-	    B(Continuant):::BFO <--> U(Specifically Dependant<br />Continuant):::BFO
-	    	U <--> V(quality):::BFO
-	    		V <--> W(relational<br />quality):::BFO
-	    	U <--> X(realizable<br />entity):::BFO
-	    		X <--> Y(role):::BFO
-	    		X <--> Z(disposition):::BFO
-	    			Z <--> C(function):::BFO
-    A(Entity) <--> |is a| AA(Occurrent):::BFO
-	    AA <--> AB(process):::BFO
-	    	AB <--> AC(history):::BFO
-	    AA <--> AD(process<br />boundary):::BFO
-	    AA <--> AE(temporal<br />region):::BFO
-	    	AE <--> AF(0D temporal<br /> region):::BFO
-	    		AF <--> AG(temporal<br />instant):::BFO
-   		AE <--> AH(1D temporal<br /> region):::BFO
-   			AH <--> AI(temporal<br />interval):::BFO
-	    AA <--> AJ(spatiotemporal<br />region):::BFO
-	      
-  classDef BFO fill:#F4AD27,color:#000
+graph LR
+    A(Entity):::BFO --> B(Continuant)
+    B(Continuant):::BFO --> D(Specifically Dependent<br> Continuant)
+    B(Continuant) --> E(Generically Dependent<br> Continuant):::BFO
+    B(Continuant) --> F(Independent<br> Continuant)
+    F(Independent<br> Continuant):::BFO --> G(Material Entity)
+    F(Independent<br> Continuant) --> H(Immaterial<br> Entity)
+    D(Specifically Dependent<br> Continuant):::BFO --> I(Quality)
+    D(Specifically Dependent<br> Continuant) --> J(Realizable<br> Entity):::BFO
+    I(Quality):::BFO --> K(Relational<br> Quality):::BFO
+    J(Realizable<br> Entity):::BFO --> L(Role):::BFO
+    J(Realizable<br> Entity) --> M(Disposition):::BFO
+    M(Disposition) --> N(Function):::BFO
+    H(Immaterial<br> Entity):::BFO --> O(Site):::BFO
+    H(Immaterial<br> Entity) --> P(Spatial<br> Region):::BFO
+    H(Immaterial<br> Entity) --> Q(Continuant Fiat<br> Boundary):::BFO
+    Q(Continuant Fiat<br> Boundary):::BFO --> R(Fiat<br> Point):::BFO
+    Q(Continuant Fiat<br> Boundary) --> S(Fiat<br> Surface):::BFO
+    Q(Continuant Fiat<br> Boundary) --> T(Fiat<br> Line):::BFO
+    P(Spatial<br> Region):::BFO --> VD(Zero-Dimensional<br> Spatial Region):::BFO
+    P(Spatial<br> Region):::BFO --> U(One-Dimensional<br> Spatial Region):::BFO
+    P(Spatial<br> Region):::BFO --> V(Two-Dimensional<br> Spatial Region):::BFO
+    P(Spatial<br> Region):::BFO --> W(Three-Dimensional<br> Spatial Region):::BFO
+    G(Material<br> Entity):::BFO --> X(Fiat Object Part):::BFO
+    G(Material<br> Entity):::BFO --> Y(Object<br> Aggregate):::BFO
+    G(Material<br> Entity):::BFO --> Z(Object):::BFO
+    A(Entity):::BFO --> C(Occurrent):::BFO
+    C(Occurrent):::BFO --> AA(Process):::BFO
+    C(Occurrent) --> AB(Process<br> Boundary):::BFO
+    C(Occurrent) --> AC(Temporal<br> Region):::BFO
+    C(Occurrent) --> AD(Spatiotemporal<br> Region):::BFO
+    AA(Process):::BFO --> AE(History):::BFO
+    AC(Temporal<br> Region):::BFO --> AF(Zero-Dimensional<br> Temporal Region):::BFO
+    AC(Temporal<br> Region) --> AI(One-Dimensional<br> Temporal Region):::BFO
+    AF(Zero-Dimensional<br> Temporal Region):::BFO --> AG(Temporal<br> Instant):::BFO
+    AI(One-Dimensional<br> Temporal Region):::BFO --> AH(Temporal<br> Interval):::BFO
+
+    classDef BFO fill:#F5AD27,color:#060606
+
