@@ -86,7 +86,7 @@ graph LR
 	G --> GI[implants]
 	G --> GM[medical devices]
     	
-    	J(Realizable<br />Entity) --> JA[rf transceiver(s)]
+    	J(Realizable<br />Entity) --> JA[rf transceivers]
     	J(Realizable<br />Entity) --> JB[power system]
     	
 	K(Relational<br /> Quality) <--> UE(signal properties)
