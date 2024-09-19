@@ -31,59 +31,82 @@ A model of modern rf persona entities and attributes
 ## Competency Questions
 - Is subject being followed?
 - What is subject transmitting?
-- What is subject's normal RF pattern of life?
-  
-```mermaid
-flowchart TD
-    A(Entity):::BFO <--> |is a| B(Continuant)
+- What is subject's normal RF pattern of life (POL)?
+- Do collections indicate RF POL deviations?
+ ```mermaid
 
-	    B(Continuant):::BFO <--> D(Generically Dependant<br />Continuant):::BFO
-	    B(Continuant):::BFO <--> E(Independant<br />Continuant):::BFO
-		    E(Independant<br />Continuant):::BFO <--> F(material<br />entity):::BFO
-		 	   F(Independant<br />Continuant):::BFO <--> G(object):::BFO
-		    	   F(Independant<br />Continuant):::BFO <--> H(fiat object<br />part):::BFO
-			   F(Independant<br />Continuant):::BFO <--> I(object<br />aggregate):::BFO
-		    E(Independant<br />Continuant):::BFO <--> J(immaterial<br />entity):::BFO
-		    	J <--> K(site):::BFO
-		    		K<--> UD(sensor location)
-		    	J <--> L(continuant<br />fiat boundary):::BFO
-		    		L <--> M(fiat point<br />boundary):::BFO
-		    		L <--> N(fiat line<br />boundary):::BFO
-		    		L <--> O(fiat surface<br />boundary):::BFO
-		    	J <--> P(spatial<br />region):::BFO
-		    		P <--> Q(0D spatial<br />region):::BFO
-		    		P <--> R(1D spatial<br />region):::BFO
-		    			R <--> UF(position)
-		    		P <--> S(2D spatial<br />region):::BFO
-		    		P <--> T(3D spatial<br />region):::BFO	    		
-	    B(Continuant):::BFO <--> U(Specifically Dependant<br />Continuant):::BFO
-	    	U <--> V(quality):::BFO
-	    		V <--> W(relational<br />quality):::BFO
-				W <--> UE(signal properties)
-					UE <--> EA[frequency]
-					UE <--> EB[power]
-					UE <--> EC[gain]
-					UE <--> ED[protocol]
-					UE <--> EF[duty cycle]
-	    	U <--> X(realizable<br />entity):::BFO
-	    		X <--> Y(role):::BFO
-	    			Y <--> UA(signal)
-	    		X <--> Z(disposition):::BFO
-	    			Z <--> C(function):::BFO
-	    				C <--> UB(communication)
-	    			
-	    			
-    A(Entity) <--> |is a| AA(Occurrent):::BFO
-	    AA(occurrent):::BFO <--> AB(process):::BFO
-	    	AB <--> AC(history):::BFO
-	    AA(occurrent):::BFO <--> AD(process<br />boundary):::BFO
-	    AA(occurrent):::BFO <--> AE(temporal<br />region):::BFO
-	    	AE <--> AF(0D temporal<br /> region):::BFO
-	    		AF <--> AG(temporal<br />instant):::BFO
-   		AE <--> AH(1D temporal<br /> region):::BFO
-   			AH <--> AI(temporal<br />interval):::BFO
-   				AI <--> UC(transmission<br />duration)
-	    AA(occurrent):::BFO <--> AJ(spatiotemporal<br />region):::BFO
-	      
-  classDef BFO fill:#F4AD27,color:#000
+graph LR
+    A(Entity):::BFO --> |is a| B(Continuant)
+    B(Continuant):::BFO --> D(Specifically Dependent<br /> Continuant)
+    B(Continuant) --> E(Generically Dependent<br /> Continuant):::BFO
+    B(Continuant) --> F(Independent<br /> Continuant)
+    F(Independent<br /> Continuant):::BFO --> G(Material Entity)
+    F(Independent<br /> Continuant) --> H(Immaterial<br /> Entity)
+    D(Specifically Dependent<br /> Continuant):::BFO --> I(Quality)
+    D(Specifically Dependent<br /> Continuant) --> J(Realizable<br /> Entity):::BFO
+    I(Quality):::BFO --> K(Relational<br /> Quality):::BFO
+    J(Realizable<br /> Entity):::BFO --> L(Role):::BFO
+    J(Realizable<br /> Entity) --> M(Disposition):::BFO
+    M(Disposition) --> N(Function):::BFO
+    H(Immaterial<br /> Entity):::BFO --> O(Site):::BFO
+    H(Immaterial<br /> Entity) --> P(Spatial<br /> Region):::BFO
+    H(Immaterial<br /> Entity) --> Q(Continuant Fiat<br /> Boundary):::BFO
+    Q(Continuant Fiat<br /> Boundary):::BFO --> R(Fiat<br /> Point):::BFO
+    Q(Continuant Fiat<br /> Boundary) --> S(Fiat<br /> Surface):::BFO
+    Q(Continuant Fiat<br /> Boundary) --> T(Fiat<br /> Line):::BFO
+    P(Spatial<br /> Region):::BFO --> VD(Zero-Dimensional<br /> Spatial Region):::BFO
+    P(Spatial<br /> Region):::BFO --> U(One-Dimensional<br /> Spatial Region):::BFO
+    P(Spatial<br /> Region):::BFO --> V(Two-Dimensional<br /> Spatial Region):::BFO
+    P(Spatial<br /> Region):::BFO --> W(Three-Dimensional<br /> Spatial Region):::BFO
+    G(Material<br /> Entity):::BFO --> X(Fiat Object Part):::BFO
+    G(Material<br /> Entity):::BFO --> Y(Object<br /> Aggregate):::BFO
+    G(Material<br /> Entity):::BFO --> Z(Object):::BFO
+    A(Entity):::BFO --> |is a| C(Occurrent):::BFO
+    C(Occurrent):::BFO --> AA(Process):::BFO
+    C(Occurrent) --> AB(Process<br /> Boundary):::BFO
+    C(Occurrent) --> AC(Temporal<br /> Region):::BFO
+    C(Occurrent) --> AD(Spatiotemporal<br /> Region):::BFO
+    AA(Process):::BFO --> AE(History):::BFO
+    AC(Temporal<br /> Region):::BFO --> AF(Zero-Dimensional<br /> Temporal Region):::BFO
+    AC(Temporal<br /> Region) --> AI(One-Dimensional<br /> Temporal Region):::BFO
+    AF(Zero-Dimensional<br /> Temporal Region):::BFO --> AG(Temporal<br /> Instant):::BFO
+    AI(One-Dimensional<br /> Temporal Region):::BFO --> AH(Temporal<br /> Interval):::BFO
+    	
+    	E --> EA[size]
+    	E --> EB[weight]
+    	E --> UE[signal<br /> properties]
+    	E --> EP[processing<br />capabilities]
+    	
+    	G --> GV[vehicle]
+	G --> GP[phone]
+	G --> GW[wearable tech]
+	G --> G2[2way radio]
+	G --> GC[wallet content]
+	G --> RF[inventory rfid]
+	G --> GI[implants]
+	G --> GM[medical devices]
+    	
+    	J(Realizable<br />Entity) --> JA[rf transceiver(s)]
+    	J(Realizable<br />Entity) --> JB[power system]
+    	
+	K(Relational<br /> Quality) <--> UE(signal properties)
+		UE <--> EA[frequency]
+		UE <--> EB[power]
+		UE <--> EC[gain]
+		UE <--> ED[protocol]
+		UE <--> EF[duty cycle]
+		
+	J <--> JA[signal]
 
+	AA(Process) --> AAC[interface with<br /> human]
+	AA(Process) --> AAB[interface with<br /> devices]
+	AA(Process) --> AAD[charge/<br /> discharge]
+	
+	
+	N(Function) <--> NA[communication]
+	        
+	AF(0D Temporal Region) --> AFA[transmission<br />duration]
+	AF(0D Temporal Region) --> AFA[reception<br />duration]
+
+
+    classDef BFO fill:#F5AD27,color:#060606
