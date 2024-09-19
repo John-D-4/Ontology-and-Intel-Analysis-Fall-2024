@@ -74,8 +74,8 @@ graph LR
     	
     	E --> EA[size]
     	E --> EB[weight]
-    	E --> UE[signal<br /> properties]
-    	E --> EP[processing<br />capabilities]
+    	E --> EC[signal<br /> properties]
+    	E --> ED[processing<br />capabilities]
     	
     	G --> GV[vehicle]
 	G --> GP[phone]
@@ -87,16 +87,17 @@ graph LR
 	G --> GM[medical devices]
     	
     	J(Realizable<br />Entity) --> JA[rf transceivers]
-    	J(Realizable<br />Entity) --> JB[power system]
+    	J --> JB[power system]
+	J --> JC[signal]
     	
 	K(Relational<br /> Quality) <--> UE(signal properties)
-		UE <--> EA[frequency]
-		UE <--> EB[power]
-		UE <--> EC[gain]
-		UE <--> ED[protocol]
-		UE <--> EF[duty cycle]
+		UE <--> UEA[frequency]
+		UE <--> UEB[power]
 		
-	J <--> JA[signal]
+		UE <--> UED[protocol]
+		UE <--> UEF[duty cycle]
+		
+
 
 	AA(Process) --> AAC[interface with<br /> human]
 	AA(Process) --> AAB[interface with<br /> devices]
@@ -106,7 +107,7 @@ graph LR
 	N(Function) <--> NA[communication]
 	        
 	AF(0D Temporal Region) --> AFA[transmission<br />duration]
-	AF(0D Temporal Region) --> AFA[reception<br />duration]
+	AF(0D Temporal Region) --> AFB[reception<br />duration]
 
 
     classDef BFO fill:#F5AD27,color:#060606
