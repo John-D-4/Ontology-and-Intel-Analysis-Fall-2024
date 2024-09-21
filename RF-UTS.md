@@ -29,10 +29,12 @@ A model of modern rf persona entities and attributes
 - signal properties
 - processing capability
 ## Competency Questions
+- What is anomolous in a given location and time?
 - Is subject being followed?
 - What is subject transmitting?
 - What is subject's normal RF pattern of life (POL)?
 - Do collections indicate RF POL deviations?
+
  ```mermaid
 
 graph LR
@@ -76,19 +78,22 @@ graph LR
     	E --> EB[weight]
     	E --> EC[signal<br /> properties]
     	E --> ED[processing<br />capabilities]
+		
+		O(Site) --> OA[transceiver<br />position]
+		O --> OB[sensor<br />position]
     	
-    	G --> GV[vehicle]
-	G --> GP[phone]
-	G --> GW[wearable tech]
-	G --> G2[2way radio]
-	G --> GC[wallet content]
-	G --> RF[inventory rfid]
-	G --> GI[implants]
-	G --> GM[medical devices]
+		Z(Object) --> GV[vehicle]
+		Z --> GP[phone]
+		Z --> GW[wearable tech]
+		Z --> G2[2way radio]
+		Z --> GC[wallet content]
+		Z --> RF[inventory rfid]
+		Z --> GI[implants]
+		Z --> GM[medical devices]
     	
     	J(Realizable<br />Entity) --> JA[rf transceivers]
     	J --> JB[power system]
-	J --> JC[signal]
+		J --> JC[signal]
     	
 	K(Relational<br /> Quality) <--> UE(signal properties)
 		UE <--> UEA[frequency]
@@ -106,8 +111,10 @@ graph LR
 	
 	N(Function) <--> NA[communication]
 	        
-	AF(0D Temporal Region) --> AFA[transmission<br />duration]
-	AF(0D Temporal Region) --> AFB[reception<br />duration]
+	AI --> AFA[transmission<br />period]
+	AI --> AFB[reception<br />period]
 
 
     classDef BFO fill:#F5AD27,color:#060606
+```
+from https://github.com/BFO-ontology/BFO-2020
